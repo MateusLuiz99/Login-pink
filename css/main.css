@@ -1,0 +1,169 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+    background-color: black;
+}
+
+/* Caixa de login */
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.login{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 25px;
+    border-bottom-right-radius: 1px;
+    padding: 100px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: #e69792;
+}
+.login::before , .login::after{
+    content: '';
+    position: absolute;
+    left: -2px;
+    top: -2px;
+    background: linear-gradient(45deg, #e69792, #ebacac, #f1b6b4, #e3a1e3, 
+    #FF69B4, #FF1493, #DB7093, #FFB6C1, #ebacac, #e69792);
+    background-size: 400%;
+    width: calc(100% + 5px);
+    height: calc(100% + 5px);
+    z-index: -1;
+    animation: animate 20s linear infinite;
+    border-radius: 25px;
+    border-bottom-right-radius: 1px;
+}
+
+@keyframes animate{
+    0%{
+        background-position: 0 0;
+    }
+    50%{
+        background-position: 400% 0;
+    }
+    100%{
+        background-position: 0 0;
+    }
+}
+.login::after{
+    filter: blur(40px);
+    opacity: 0.99;
+}
+.circle{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 110px;
+    width: 110px;
+    border-radius: 55px;
+    margin-left: 28%;
+    margin-top: 10%;
+    z-index: 1;
+    
+    background: linear-gradient(45deg, #e69792, #ebacac, #f1b6b4, #e3a1e3, 
+    #FF69B4, #FF1493, #DB7093, #FFB6C1, #ebacac, #e69792);
+    background-size: 400%;
+    animation: animate 20s linear infinite;
+    box-shadow: 0 0 5px #e69792, 0 0 25px #e69792;
+}
+.circle i{
+    font-size: 7rem;
+    color: white;
+}
+.icons-social i{
+    font-size: 1.9rem;
+    color: white;
+}
+.icons-social{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+.space-items{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+.space-items p{
+    color: white;
+}
+
+input[type="email"], input[type="password"]{
+    height: 40px;
+    width: 270px;
+    padding: 0 10px 0 50px;
+    cursor: pointer;
+    outline: none;
+    border-radius: 1px;
+    border: 2px solid white;
+    background-color: transparent;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    transition: .5s;
+}
+input[type="email"]:hover, input[type="password"]:hover{
+    background-color: #f1b6b4;
+}
+input[type="submit"]{
+    position: absolute;
+    margin-top: 320px;
+    cursor: pointer;
+    height: 95px;
+    width: 400px;
+    box-shadow: 0 0 5px #e69792, 0 0 25px #e69792;
+    border: none;
+    color: white;
+    font-size: 16px;
+    clip-path: polygon(25% 25%, 75% 25%, 85% 50%, 75% 75%, 25% 75%, 15% 50%);
+    transition: 0.5s;
+    background: linear-gradient(45deg, #e69792, #ebacac, #f1b6b4, #e3a1e3, 
+    #FF69B4, #FF1493, #DB7093, #FFB6C1, #ebacac, #e69792);
+    background-size: 400%;
+    /* width: calc(100% + 5px); */
+    /* height: calc(100% + 5px); */
+    animation: animate 20s linear infinite;
+}
+input[type="submit"]::after{
+    filter: blur(40px);
+    opacity: 0.5;
+}
+input[type="submit"]:active{
+    transform: scale(0.95);
+}
+
+input[type="email"]::placeholder, input[type="password"]::placeholder{
+    color: white;
+}
+.space-items a{
+    text-decoration: none;
+    color: blue;
+}
+.space-items i{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 1.5rem;
+    color: white;
+    margin-right: 290px;
+    /* padding-right: 130px; */
+    background-color: transparent;
+    height: 40px;
+    width: 40px;
+    border: 1px solid white;
+}
+
